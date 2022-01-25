@@ -28,11 +28,15 @@ jobs:
     - name: Run TypeScript tests
       run: npm t
       working-directory: ./DotnetTemplate.Web
-
+  
+  deploy:
+    name: Deploy and test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
     - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
       with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "morning-retreat-83411" #Must be unique in Heroku
           heroku_email: "simeon_penev@hotmail.com"
           usedocker: true
-          
