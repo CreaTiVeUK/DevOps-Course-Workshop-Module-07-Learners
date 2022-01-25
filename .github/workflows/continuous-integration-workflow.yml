@@ -34,4 +34,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "morning-retreat-83411" #Must be unique in Heroku
           heroku_email: "simeon_penev@hotmail.com"
-
+          usedocker: true
+          
